@@ -1,0 +1,680 @@
+Analysis & Synthesis report for scp
+Thu May 02 11:56:49 2024
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: scp:inst|fetch:inst2|LPM_CONSTANT:inst1
+ 12. Parameter Settings for User Entity Instance: scp:inst|fetch:inst2|LPM_CONSTANT:inst3
+ 13. Parameter Settings for User Entity Instance: scp:inst|BUSMUX:inst
+ 14. Parameter Settings for User Entity Instance: scp:inst|decode:inst6|BUSMUX:inst2
+ 15. Parameter Settings for User Entity Instance: scp:inst|decode:inst6|BUSMUX:inst3
+ 16. Parameter Settings for User Entity Instance: scp:inst|decode:inst6|BUSMUX:inst10
+ 17. Parameter Settings for User Entity Instance: scp:inst|decode:inst6|BUSMUX:inst7
+ 18. Parameter Settings for User Entity Instance: scp:inst|decode:inst6|LPM_CONSTANT:inst6
+ 19. Parameter Settings for User Entity Instance: scp:inst|BUSMUX:inst8
+ 20. Parameter Settings for User Entity Instance: BUSMUX:inst2
+ 21. Post-Synthesis Netlist Statistics for Top Partition
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu May 02 11:56:49 2024       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                      ; scp                                         ;
+; Top-level Entity Name              ; system                                      ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 4,221                                       ;
+;     Total combinational functions  ; 2,737                                       ;
+;     Dedicated logic registers      ; 1,618                                       ;
+; Total registers                    ; 1618                                        ;
+; Total pins                         ; 315                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M50DAF484C7G     ;                    ;
+; Top-level entity name                                            ; system             ; scp                ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; VHDL Show LMF Mapping Messages                                   ; Off                ;                    ;
+; VHDL Version                                                     ; VHDL_2008          ; VHDL_1993          ;
+; Block Design Naming                                              ; QuartusII          ; Auto               ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.1%      ;
+;     Processor 4            ;   0.1%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                      ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                            ; Library ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------+---------+
+; seg7decode.vhd                   ; yes             ; User VHDL File                     ; C:/CPE1510/goetsch-leigh-scp_10/seg7decode.vhd                          ;         ;
+; dmem.vhd                         ; yes             ; User VHDL File                     ; C:/CPE1510/goetsch-leigh-scp_10/dmem.vhd                                ;         ;
+; control.vhd                      ; yes             ; User VHDL File                     ; C:/CPE1510/goetsch-leigh-scp_10/control.vhd                             ;         ;
+; cpsr.vhd                         ; yes             ; User VHDL File                     ; C:/CPE1510/goetsch-leigh-scp_10/cpsr.vhd                                ;         ;
+; alu.vhd                          ; yes             ; User VHDL File                     ; C:/CPE1510/goetsch-leigh-scp_10/alu.vhd                                 ;         ;
+; shifter.vhd                      ; yes             ; User VHDL File                     ; C:/CPE1510/goetsch-leigh-scp_10/shifter.vhd                             ;         ;
+; rotator.vhd                      ; yes             ; User VHDL File                     ; C:/CPE1510/goetsch-leigh-scp_10/rotator.vhd                             ;         ;
+; regfile.vhd                      ; yes             ; User VHDL File                     ; C:/CPE1510/goetsch-leigh-scp_10/regfile.vhd                             ;         ;
+; extender.vhd                     ; yes             ; User VHDL File                     ; C:/CPE1510/goetsch-leigh-scp_10/extender.vhd                            ;         ;
+; pc.vhd                           ; yes             ; User VHDL File                     ; C:/CPE1510/goetsch-leigh-scp_10/pc.vhd                                  ;         ;
+; irom.vhd                         ; yes             ; User VHDL File                     ; C:/CPE1510/goetsch-leigh-scp_10/irom.vhd                                ;         ;
+; adder.vhd                        ; yes             ; User VHDL File                     ; C:/CPE1510/goetsch-leigh-scp_10/adder.vhd                               ;         ;
+; fetch.bdf                        ; yes             ; User Block Diagram/Schematic File  ; C:/CPE1510/goetsch-leigh-scp_10/fetch.bdf                               ;         ;
+; decode.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/CPE1510/goetsch-leigh-scp_10/decode.bdf                              ;         ;
+; execute.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/CPE1510/goetsch-leigh-scp_10/execute.bdf                             ;         ;
+; scp.bdf                          ; yes             ; User Block Diagram/Schematic File  ; C:/CPE1510/goetsch-leigh-scp_10/scp.bdf                                 ;         ;
+; seg7.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/CPE1510/goetsch-leigh-scp_10/seg7.bdf                                ;         ;
+; reg32.vhd                        ; yes             ; User VHDL File                     ; C:/CPE1510/goetsch-leigh-scp_10/reg32.vhd                               ;         ;
+; LED.bdf                          ; yes             ; User Block Diagram/Schematic File  ; C:/CPE1510/goetsch-leigh-scp_10/LED.bdf                                 ;         ;
+; addressdecoder.vhd               ; yes             ; User VHDL File                     ; C:/CPE1510/goetsch-leigh-scp_10/addressdecoder.vhd                      ;         ;
+; SYNCHRONIZER.bdf                 ; yes             ; User Block Diagram/Schematic File  ; C:/CPE1510/goetsch-leigh-scp_10/SYNCHRONIZER.bdf                        ;         ;
+; reg10.vhd                        ; yes             ; User VHDL File                     ; C:/CPE1510/goetsch-leigh-scp_10/reg10.vhd                               ;         ;
+; system.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/CPE1510/goetsch-leigh-scp_10/system.bdf                              ;         ;
+; lpm_constant.tdf                 ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_constant.tdf ;         ;
+; db/lpm_constant_4j4.tdf          ; yes             ; Auto-Generated Megafunction        ; C:/CPE1510/goetsch-leigh-scp_10/db/lpm_constant_4j4.tdf                 ;         ;
+; db/lpm_constant_8j4.tdf          ; yes             ; Auto-Generated Megafunction        ; C:/CPE1510/goetsch-leigh-scp_10/db/lpm_constant_8j4.tdf                 ;         ;
+; busmux.tdf                       ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/busmux.tdf       ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc      ;         ;
+; lpm_mux.tdf                      ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.tdf      ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc   ;         ;
+; muxlut.inc                       ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/muxlut.inc       ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/bypassff.inc     ;         ;
+; altshift.inc                     ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altshift.inc     ;         ;
+; db/mux_h7c.tdf                   ; yes             ; Auto-Generated Megafunction        ; C:/CPE1510/goetsch-leigh-scp_10/db/mux_h7c.tdf                          ;         ;
+; db/mux_06c.tdf                   ; yes             ; Auto-Generated Megafunction        ; C:/CPE1510/goetsch-leigh-scp_10/db/mux_06c.tdf                          ;         ;
+; db/mux_16c.tdf                   ; yes             ; Auto-Generated Megafunction        ; C:/CPE1510/goetsch-leigh-scp_10/db/mux_16c.tdf                          ;         ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 4,221     ;
+;                                             ;           ;
+; Total combinational functions               ; 2737      ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 2149      ;
+;     -- 3 input functions                    ; 435       ;
+;     -- <=2 input functions                  ; 153       ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 2616      ;
+;     -- arithmetic mode                      ; 121       ;
+;                                             ;           ;
+; Total registers                             ; 1618      ;
+;     -- Dedicated logic registers            ; 1618      ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 315       ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; CLK~input ;
+; Maximum fan-out                             ; 1618      ;
+; Total fan-out                               ; 15663     ;
+; Average fan-out                             ; 3.14      ;
++---------------------------------------------+-----------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                              ;
++-----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------+----------------+--------------+
+; Compilation Hierarchy Node              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                               ; Entity Name    ; Library Name ;
++-----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------+----------------+--------------+
+; |system                                 ; 2737 (0)            ; 1618 (0)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 315  ; 0            ; 0          ; |system                                                                           ; system         ; work         ;
+;    |ADDRESSDECODER:inst5|               ; 11 (11)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|ADDRESSDECODER:inst5                                                      ; ADDRESSDECODER ; work         ;
+;    |LED:inst7|                          ; 11 (0)              ; 10 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|LED:inst7                                                                 ; LED            ; work         ;
+;       |REG32:inst|                      ; 11 (11)             ; 10 (10)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|LED:inst7|REG32:inst                                                      ; REG32          ; work         ;
+;    |REG10:inst3|                        ; 10 (10)             ; 10 (10)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|REG10:inst3                                                               ; REG10          ; work         ;
+;    |SYNCHRONIZER:inst4|                 ; 0 (0)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|SYNCHRONIZER:inst4                                                        ; SYNCHRONIZER   ; work         ;
+;    |dmem:inst6|                         ; 688 (688)           ; 1024 (1024)               ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|dmem:inst6                                                                ; dmem           ; work         ;
+;    |scp:inst|                           ; 1960 (0)            ; 548 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|scp:inst                                                                  ; scp            ; work         ;
+;       |CONTROL:inst1|                   ; 20 (20)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|scp:inst|CONTROL:inst1                                                    ; CONTROL        ; work         ;
+;       |busmux:inst8|                    ; 97 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|scp:inst|busmux:inst8                                                     ; busmux         ; work         ;
+;          |lpm_mux:$00000|               ; 97 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|scp:inst|busmux:inst8|lpm_mux:$00000                                      ; lpm_mux        ; work         ;
+;             |mux_h7c:auto_generated|    ; 97 (97)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|scp:inst|busmux:inst8|lpm_mux:$00000|mux_h7c:auto_generated               ; mux_h7c        ; work         ;
+;       |decode:inst6|                    ; 1453 (0)            ; 512 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|scp:inst|decode:inst6                                                     ; decode         ; work         ;
+;          |ADDER:inst1|                  ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|scp:inst|decode:inst6|ADDER:inst1                                         ; ADDER          ; work         ;
+;          |EXTENDER:inst11|              ; 22 (22)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|scp:inst|decode:inst6|EXTENDER:inst11                                     ; EXTENDER       ; work         ;
+;          |REGFILE:inst|                 ; 952 (952)           ; 512 (512)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|scp:inst|decode:inst6|REGFILE:inst                                        ; REGFILE        ; work         ;
+;          |SHIFTER:inst9|                ; 267 (267)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|scp:inst|decode:inst6|SHIFTER:inst9                                       ; SHIFTER        ; work         ;
+;          |busmux:inst10|                ; 5 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|scp:inst|decode:inst6|busmux:inst10                                       ; busmux         ; work         ;
+;             |lpm_mux:$00000|            ; 5 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|scp:inst|decode:inst6|busmux:inst10|lpm_mux:$00000                        ; lpm_mux        ; work         ;
+;                |mux_16c:auto_generated| ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|scp:inst|decode:inst6|busmux:inst10|lpm_mux:$00000|mux_16c:auto_generated ; mux_16c        ; work         ;
+;          |busmux:inst2|                 ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|scp:inst|decode:inst6|busmux:inst2                                        ; busmux         ; work         ;
+;             |lpm_mux:$00000|            ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|scp:inst|decode:inst6|busmux:inst2|lpm_mux:$00000                         ; lpm_mux        ; work         ;
+;                |mux_06c:auto_generated| ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|scp:inst|decode:inst6|busmux:inst2|lpm_mux:$00000|mux_06c:auto_generated  ; mux_06c        ; work         ;
+;          |busmux:inst3|                 ; 171 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|scp:inst|decode:inst6|busmux:inst3                                        ; busmux         ; work         ;
+;             |lpm_mux:$00000|            ; 171 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|scp:inst|decode:inst6|busmux:inst3|lpm_mux:$00000                         ; lpm_mux        ; work         ;
+;                |mux_h7c:auto_generated| ; 171 (171)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|scp:inst|decode:inst6|busmux:inst3|lpm_mux:$00000|mux_h7c:auto_generated  ; mux_h7c        ; work         ;
+;       |execute:inst4|                   ; 217 (0)             ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|scp:inst|execute:inst4                                                    ; execute        ; work         ;
+;          |ALU:inst1|                    ; 217 (217)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|scp:inst|execute:inst4|ALU:inst1                                          ; ALU            ; work         ;
+;          |CPSR:inst2|                   ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|scp:inst|execute:inst4|CPSR:inst2                                         ; CPSR           ; work         ;
+;       |fetch:inst2|                     ; 173 (0)             ; 32 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|scp:inst|fetch:inst2                                                      ; fetch          ; work         ;
+;          |ADDER:inst2|                  ; 30 (30)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|scp:inst|fetch:inst2|ADDER:inst2                                          ; ADDER          ; work         ;
+;          |ADDER:inst4|                  ; 29 (29)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|scp:inst|fetch:inst2|ADDER:inst4                                          ; ADDER          ; work         ;
+;          |IROM:inst6|                   ; 81 (81)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|scp:inst|fetch:inst2|IROM:inst6                                           ; IROM           ; work         ;
+;          |PC:inst5|                     ; 33 (33)             ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|scp:inst|fetch:inst2|PC:inst5                                             ; PC             ; work         ;
+;    |seg7:inst8|                         ; 57 (0)              ; 24 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|seg7:inst8                                                                ; seg7           ; work         ;
+;       |REG32:inst2|                     ; 15 (15)             ; 24 (24)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|seg7:inst8|REG32:inst2                                                    ; REG32          ; work         ;
+;       |SEG7DECODE:inst|                 ; 42 (42)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |system|seg7:inst8|SEG7DECODE:inst                                                ; SEG7DECODE     ; work         ;
++-----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------+----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; REG10:inst3|Q[10..31]                  ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 22 ;                                        ;
++----------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 1618  ;
+; Number of registers using Synchronous Clear  ; 30    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 6     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 1576  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |system|scp:inst|fetch:inst2|PC:inst5|Q[1]                                                       ;
+; 3:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |system|scp:inst|fetch:inst2|PC:inst5|Q[7]                                                       ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |system|LED:inst7|REG32:inst|Q[7]                                                                ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |system|seg7:inst8|REG32:inst2|Q[14]                                                             ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |system|scp:inst|decode:inst6|REGFILE:inst|R8[19]                                                ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |system|scp:inst|decode:inst6|REGFILE:inst|R9[1]                                                 ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |system|scp:inst|decode:inst6|REGFILE:inst|R10[30]                                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |system|scp:inst|decode:inst6|REGFILE:inst|R11[20]                                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |system|scp:inst|decode:inst6|REGFILE:inst|R12[25]                                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |system|scp:inst|decode:inst6|REGFILE:inst|R13[4]                                                ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |system|scp:inst|decode:inst6|REGFILE:inst|R14[19]                                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |system|scp:inst|decode:inst6|REGFILE:inst|R15[14]                                               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |system|scp:inst|decode:inst6|REGFILE:inst|R0[14]                                                ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |system|scp:inst|decode:inst6|REGFILE:inst|R1[15]                                                ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |system|scp:inst|decode:inst6|REGFILE:inst|R2[16]                                                ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |system|scp:inst|decode:inst6|REGFILE:inst|R3[2]                                                 ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |system|scp:inst|decode:inst6|REGFILE:inst|R4[8]                                                 ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |system|scp:inst|decode:inst6|REGFILE:inst|R5[29]                                                ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |system|scp:inst|decode:inst6|REGFILE:inst|R6[3]                                                 ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |system|scp:inst|decode:inst6|REGFILE:inst|R7[9]                                                 ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |system|scp:inst|decode:inst6|EXTENDER:inst11|Mux28                                              ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |system|scp:inst|busmux:inst8|lpm_mux:$00000|mux_h7c:auto_generated|result_node[8]               ;
+; 6:1                ; 32 bits   ; 128 LEs       ; 128 LEs              ; 0 LEs                  ; No         ; |system|scp:inst|execute:inst4|ALU:inst1|Mux23                                                   ;
+; 16:1               ; 32 bits   ; 320 LEs       ; 320 LEs              ; 0 LEs                  ; No         ; |system|scp:inst|decode:inst6|REGFILE:inst|Mux29                                                 ;
+; 16:1               ; 32 bits   ; 320 LEs       ; 320 LEs              ; 0 LEs                  ; No         ; |system|scp:inst|decode:inst6|REGFILE:inst|Mux62                                                 ;
+; 16:1               ; 32 bits   ; 320 LEs       ; 320 LEs              ; 0 LEs                  ; No         ; |system|scp:inst|decode:inst6|REGFILE:inst|Mux67                                                 ;
+; 1:1                ; 64 bits   ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |system|scp:inst|execute:inst4|ALU:inst1|Add0                                                    ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |system|scp:inst|CONTROL:inst1|ALUS[1]                                                           ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |system|scp:inst|decode:inst6|busmux:inst3|lpm_mux:$00000|mux_h7c:auto_generated|result_node[12] ;
+; 10:1               ; 10 bits   ; 60 LEs        ; 40 LEs               ; 20 LEs                 ; No         ; |system|scp:inst|decode:inst6|busmux:inst3|lpm_mux:$00000|mux_h7c:auto_generated|result_node[6]  ;
+; 11:1               ; 7 bits    ; 49 LEs        ; 42 LEs               ; 7 LEs                  ; No         ; |system|scp:inst|decode:inst6|busmux:inst3|lpm_mux:$00000|mux_h7c:auto_generated|result_node[23] ;
+; 12:1               ; 3 bits    ; 24 LEs        ; 21 LEs               ; 3 LEs                  ; No         ; |system|scp:inst|decode:inst6|busmux:inst3|lpm_mux:$00000|mux_h7c:auto_generated|result_node[24] ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 14 LEs               ; 2 LEs                  ; No         ; |system|scp:inst|decode:inst6|busmux:inst3|lpm_mux:$00000|mux_h7c:auto_generated|result_node[29] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: scp:inst|fetch:inst2|LPM_CONSTANT:inst1 ;
++--------------------+------------------+----------------------------------------------+
+; Parameter Name     ; Value            ; Type                                         ;
++--------------------+------------------+----------------------------------------------+
+; LPM_WIDTH          ; 32               ; Untyped                                      ;
+; LPM_CVALUE         ; 4                ; Untyped                                      ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                      ;
+; CBXI_PARAMETER     ; lpm_constant_4j4 ; Untyped                                      ;
++--------------------+------------------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: scp:inst|fetch:inst2|LPM_CONSTANT:inst3 ;
++--------------------+------------------+----------------------------------------------+
+; Parameter Name     ; Value            ; Type                                         ;
++--------------------+------------------+----------------------------------------------+
+; LPM_WIDTH          ; 32               ; Untyped                                      ;
+; LPM_CVALUE         ; 8                ; Untyped                                      ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                      ;
+; CBXI_PARAMETER     ; lpm_constant_8j4 ; Untyped                                      ;
++--------------------+------------------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: scp:inst|BUSMUX:inst ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; WIDTH          ; 32    ; Untyped                                  ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: scp:inst|decode:inst6|BUSMUX:inst2 ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; WIDTH          ; 4     ; Untyped                                                ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: scp:inst|decode:inst6|BUSMUX:inst3 ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; WIDTH          ; 32    ; Untyped                                                ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: scp:inst|decode:inst6|BUSMUX:inst10 ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; WIDTH          ; 5     ; Untyped                                                 ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: scp:inst|decode:inst6|BUSMUX:inst7 ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; WIDTH          ; 4     ; Untyped                                                ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: scp:inst|decode:inst6|LPM_CONSTANT:inst6 ;
++--------------------+------------------+-----------------------------------------------+
+; Parameter Name     ; Value            ; Type                                          ;
++--------------------+------------------+-----------------------------------------------+
+; LPM_WIDTH          ; 4                ; Untyped                                       ;
+; LPM_CVALUE         ; 0                ; Untyped                                       ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                       ;
+; CBXI_PARAMETER     ; lpm_constant_v64 ; Untyped                                       ;
++--------------------+------------------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: scp:inst|BUSMUX:inst8 ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; WIDTH          ; 32    ; Untyped                                   ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BUSMUX:inst2 ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; WIDTH          ; 32    ; Untyped                          ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 315                         ;
+; cycloneiii_ff         ; 1618                        ;
+;     CLR               ; 2                           ;
+;     ENA               ; 1572                        ;
+;     ENA CLR           ; 4                           ;
+;     SCLR              ; 30                          ;
+;     plain             ; 10                          ;
+; cycloneiii_lcell_comb ; 2757                        ;
+;     arith             ; 121                         ;
+;         2 data inputs ; 58                          ;
+;         3 data inputs ; 63                          ;
+;     normal            ; 2636                        ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 22                          ;
+;         2 data inputs ; 92                          ;
+;         3 data inputs ; 372                         ;
+;         4 data inputs ; 2149                        ;
+;                       ;                             ;
+; Max LUT depth         ; 36.50                       ;
+; Average LUT depth     ; 21.22                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:28     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Thu May 02 11:55:50 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off scp -c scp
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file seg7decode.vhd
+    Info (12022): Found design unit 1: SEG7DECODE-MULTIPLEXER File: C:/CPE1510/goetsch-leigh-scp_10/seg7decode.vhd Line: 40
+    Info (12023): Found entity 1: SEG7DECODE File: C:/CPE1510/goetsch-leigh-scp_10/seg7decode.vhd Line: 29
+Info (12021): Found 2 design units, including 1 entities, in source file dmem.vhd
+    Info (12022): Found design unit 1: dmem-behavioral File: C:/CPE1510/goetsch-leigh-scp_10/dmem.vhd Line: 53
+    Info (12023): Found entity 1: dmem File: C:/CPE1510/goetsch-leigh-scp_10/dmem.vhd Line: 41
+Info (12021): Found 2 design units, including 1 entities, in source file control.vhd
+    Info (12022): Found design unit 1: CONTROL-DATAFLOW File: C:/CPE1510/goetsch-leigh-scp_10/control.vhd Line: 56
+    Info (12023): Found entity 1: CONTROL File: C:/CPE1510/goetsch-leigh-scp_10/control.vhd Line: 38
+Info (12021): Found 2 design units, including 1 entities, in source file cpsr.vhd
+    Info (12022): Found design unit 1: CPSR-BEHAVIORAL File: C:/CPE1510/goetsch-leigh-scp_10/cpsr.vhd Line: 32
+    Info (12023): Found entity 1: CPSR File: C:/CPE1510/goetsch-leigh-scp_10/cpsr.vhd Line: 23
+Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
+    Info (12022): Found design unit 1: ALU-DATAFLOW File: C:/CPE1510/goetsch-leigh-scp_10/alu.vhd Line: 33
+    Info (12023): Found entity 1: ALU File: C:/CPE1510/goetsch-leigh-scp_10/alu.vhd Line: 23
+Info (12021): Found 2 design units, including 1 entities, in source file shifter.vhd
+    Info (12022): Found design unit 1: SHIFTER-DATAFLOW File: C:/CPE1510/goetsch-leigh-scp_10/shifter.vhd Line: 27
+    Info (12023): Found entity 1: SHIFTER File: C:/CPE1510/goetsch-leigh-scp_10/shifter.vhd Line: 20
+Info (12021): Found 2 design units, including 1 entities, in source file rotator.vhd
+    Info (12022): Found design unit 1: ROTATOR-DATAFLOW File: C:/CPE1510/goetsch-leigh-scp_10/rotator.vhd Line: 28
+    Info (12023): Found entity 1: ROTATOR File: C:/CPE1510/goetsch-leigh-scp_10/rotator.vhd Line: 21
+Info (12021): Found 2 design units, including 1 entities, in source file regfile.vhd
+    Info (12022): Found design unit 1: REGFILE-BEHAVIORAL File: C:/CPE1510/goetsch-leigh-scp_10/regfile.vhd Line: 35
+    Info (12023): Found entity 1: REGFILE File: C:/CPE1510/goetsch-leigh-scp_10/regfile.vhd Line: 26
+Info (12021): Found 2 design units, including 1 entities, in source file extender.vhd
+    Info (12022): Found design unit 1: EXTENDER-DATAFLOW File: C:/CPE1510/goetsch-leigh-scp_10/extender.vhd Line: 33
+    Info (12023): Found entity 1: EXTENDER File: C:/CPE1510/goetsch-leigh-scp_10/extender.vhd Line: 23
+Info (12021): Found 2 design units, including 1 entities, in source file pc.vhd
+    Info (12022): Found design unit 1: PC-BEHAVIORAL File: C:/CPE1510/goetsch-leigh-scp_10/pc.vhd Line: 36
+    Info (12023): Found entity 1: PC File: C:/CPE1510/goetsch-leigh-scp_10/pc.vhd Line: 27
+Info (12021): Found 2 design units, including 1 entities, in source file irom.vhd
+    Info (12022): Found design unit 1: IROM-MULTIPLEXER File: C:/CPE1510/goetsch-leigh-scp_10/irom.vhd Line: 32
+    Info (12023): Found entity 1: IROM File: C:/CPE1510/goetsch-leigh-scp_10/irom.vhd Line: 26
+Info (12021): Found 2 design units, including 1 entities, in source file adder.vhd
+    Info (12022): Found design unit 1: ADDER-DATAFLOW File: C:/CPE1510/goetsch-leigh-scp_10/adder.vhd Line: 28
+    Info (12023): Found entity 1: ADDER File: C:/CPE1510/goetsch-leigh-scp_10/adder.vhd Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file fetch.bdf
+    Info (12023): Found entity 1: fetch
+Info (12021): Found 1 design units, including 1 entities, in source file decode.bdf
+    Info (12023): Found entity 1: decode
+Info (12021): Found 1 design units, including 1 entities, in source file execute.bdf
+    Info (12023): Found entity 1: execute
+Info (12021): Found 1 design units, including 1 entities, in source file scp.bdf
+    Info (12023): Found entity 1: scp
+Info (12021): Found 1 design units, including 1 entities, in source file seg7.bdf
+    Info (12023): Found entity 1: seg7
+Info (12021): Found 2 design units, including 1 entities, in source file reg32.vhd
+    Info (12022): Found design unit 1: REG32-BEHAVIORAL File: C:/CPE1510/goetsch-leigh-scp_10/reg32.vhd Line: 30
+    Info (12023): Found entity 1: REG32 File: C:/CPE1510/goetsch-leigh-scp_10/reg32.vhd Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file led.bdf
+    Info (12023): Found entity 1: LED
+Info (12021): Found 2 design units, including 1 entities, in source file addressdecoder.vhd
+    Info (12022): Found design unit 1: ADDRESSDECODER-DATAFLOW File: C:/CPE1510/goetsch-leigh-scp_10/addressdecoder.vhd Line: 38
+    Info (12023): Found entity 1: ADDRESSDECODER File: C:/CPE1510/goetsch-leigh-scp_10/addressdecoder.vhd Line: 26
+Info (12021): Found 1 design units, including 1 entities, in source file synchronizer.bdf
+    Info (12023): Found entity 1: SYNCHRONIZER
+Info (12021): Found 2 design units, including 1 entities, in source file reg10.vhd
+    Info (12022): Found design unit 1: REG10-BEHAVIORAL File: C:/CPE1510/goetsch-leigh-scp_10/reg10.vhd Line: 33
+    Info (12023): Found entity 1: REG10 File: C:/CPE1510/goetsch-leigh-scp_10/reg10.vhd Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file system.bdf
+    Info (12023): Found entity 1: system
+Info (12127): Elaborating entity "system" for the top level hierarchy
+Info (12128): Elaborating entity "scp" for hierarchy "scp:inst"
+Info (12128): Elaborating entity "CONTROL" for hierarchy "scp:inst|CONTROL:inst1"
+Info (12128): Elaborating entity "fetch" for hierarchy "scp:inst|fetch:inst2"
+Info (12128): Elaborating entity "IROM" for hierarchy "scp:inst|fetch:inst2|IROM:inst6"
+Info (12128): Elaborating entity "PC" for hierarchy "scp:inst|fetch:inst2|PC:inst5"
+Info (12128): Elaborating entity "ADDER" for hierarchy "scp:inst|fetch:inst2|ADDER:inst2"
+Info (12128): Elaborating entity "LPM_CONSTANT" for hierarchy "scp:inst|fetch:inst2|LPM_CONSTANT:inst1"
+Info (12130): Elaborated megafunction instantiation "scp:inst|fetch:inst2|LPM_CONSTANT:inst1"
+Info (12133): Instantiated megafunction "scp:inst|fetch:inst2|LPM_CONSTANT:inst1" with the following parameter:
+    Info (12134): Parameter "LPM_CVALUE" = "4"
+    Info (12134): Parameter "LPM_WIDTH" = "32"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_constant_4j4.tdf
+    Info (12023): Found entity 1: lpm_constant_4j4 File: C:/CPE1510/goetsch-leigh-scp_10/db/lpm_constant_4j4.tdf Line: 22
+Info (12128): Elaborating entity "lpm_constant_4j4" for hierarchy "scp:inst|fetch:inst2|LPM_CONSTANT:inst1|lpm_constant_4j4:ag" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_constant.tdf Line: 45
+Info (12128): Elaborating entity "LPM_CONSTANT" for hierarchy "scp:inst|fetch:inst2|LPM_CONSTANT:inst3"
+Info (12130): Elaborated megafunction instantiation "scp:inst|fetch:inst2|LPM_CONSTANT:inst3"
+Info (12133): Instantiated megafunction "scp:inst|fetch:inst2|LPM_CONSTANT:inst3" with the following parameter:
+    Info (12134): Parameter "LPM_CVALUE" = "8"
+    Info (12134): Parameter "LPM_WIDTH" = "32"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_constant_8j4.tdf
+    Info (12023): Found entity 1: lpm_constant_8j4 File: C:/CPE1510/goetsch-leigh-scp_10/db/lpm_constant_8j4.tdf Line: 22
+Info (12128): Elaborating entity "lpm_constant_8j4" for hierarchy "scp:inst|fetch:inst2|LPM_CONSTANT:inst3|lpm_constant_8j4:ag" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_constant.tdf Line: 45
+Info (12128): Elaborating entity "BUSMUX" for hierarchy "scp:inst|BUSMUX:inst"
+Info (12130): Elaborated megafunction instantiation "scp:inst|BUSMUX:inst"
+Info (12133): Instantiated megafunction "scp:inst|BUSMUX:inst" with the following parameter:
+    Info (12134): Parameter "WIDTH" = "32"
+Info (12128): Elaborating entity "lpm_mux" for hierarchy "scp:inst|BUSMUX:inst|lpm_mux:$00000" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/busmux.tdf Line: 43
+Info (12131): Elaborated megafunction instantiation "scp:inst|BUSMUX:inst|lpm_mux:$00000", which is child of megafunction instantiation "scp:inst|BUSMUX:inst" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/busmux.tdf Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_h7c.tdf
+    Info (12023): Found entity 1: mux_h7c File: C:/CPE1510/goetsch-leigh-scp_10/db/mux_h7c.tdf Line: 22
+Info (12128): Elaborating entity "mux_h7c" for hierarchy "scp:inst|BUSMUX:inst|lpm_mux:$00000|mux_h7c:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.tdf Line: 86
+Info (12128): Elaborating entity "decode" for hierarchy "scp:inst|decode:inst6"
+Info (12128): Elaborating entity "EXTENDER" for hierarchy "scp:inst|decode:inst6|EXTENDER:inst11"
+Info (12128): Elaborating entity "REGFILE" for hierarchy "scp:inst|decode:inst6|REGFILE:inst"
+Info (12128): Elaborating entity "BUSMUX" for hierarchy "scp:inst|decode:inst6|BUSMUX:inst2"
+Info (12130): Elaborated megafunction instantiation "scp:inst|decode:inst6|BUSMUX:inst2"
+Info (12133): Instantiated megafunction "scp:inst|decode:inst6|BUSMUX:inst2" with the following parameter:
+    Info (12134): Parameter "WIDTH" = "4"
+Info (12128): Elaborating entity "lpm_mux" for hierarchy "scp:inst|decode:inst6|BUSMUX:inst2|lpm_mux:$00000" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/busmux.tdf Line: 43
+Info (12131): Elaborated megafunction instantiation "scp:inst|decode:inst6|BUSMUX:inst2|lpm_mux:$00000", which is child of megafunction instantiation "scp:inst|decode:inst6|BUSMUX:inst2" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/busmux.tdf Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_06c.tdf
+    Info (12023): Found entity 1: mux_06c File: C:/CPE1510/goetsch-leigh-scp_10/db/mux_06c.tdf Line: 22
+Info (12128): Elaborating entity "mux_06c" for hierarchy "scp:inst|decode:inst6|BUSMUX:inst2|lpm_mux:$00000|mux_06c:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.tdf Line: 86
+Info (12128): Elaborating entity "SHIFTER" for hierarchy "scp:inst|decode:inst6|SHIFTER:inst9"
+Info (12128): Elaborating entity "BUSMUX" for hierarchy "scp:inst|decode:inst6|BUSMUX:inst10"
+Info (12130): Elaborated megafunction instantiation "scp:inst|decode:inst6|BUSMUX:inst10"
+Info (12133): Instantiated megafunction "scp:inst|decode:inst6|BUSMUX:inst10" with the following parameter:
+    Info (12134): Parameter "WIDTH" = "5"
+Info (12128): Elaborating entity "lpm_mux" for hierarchy "scp:inst|decode:inst6|BUSMUX:inst10|lpm_mux:$00000" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/busmux.tdf Line: 43
+Info (12131): Elaborated megafunction instantiation "scp:inst|decode:inst6|BUSMUX:inst10|lpm_mux:$00000", which is child of megafunction instantiation "scp:inst|decode:inst6|BUSMUX:inst10" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/busmux.tdf Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_16c.tdf
+    Info (12023): Found entity 1: mux_16c File: C:/CPE1510/goetsch-leigh-scp_10/db/mux_16c.tdf Line: 22
+Info (12128): Elaborating entity "mux_16c" for hierarchy "scp:inst|decode:inst6|BUSMUX:inst10|lpm_mux:$00000|mux_16c:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.tdf Line: 86
+Info (12128): Elaborating entity "ROTATOR" for hierarchy "scp:inst|decode:inst6|ROTATOR:inst5"
+Info (12128): Elaborating entity "LPM_CONSTANT" for hierarchy "scp:inst|decode:inst6|LPM_CONSTANT:inst6"
+Info (12130): Elaborated megafunction instantiation "scp:inst|decode:inst6|LPM_CONSTANT:inst6"
+Info (12133): Instantiated megafunction "scp:inst|decode:inst6|LPM_CONSTANT:inst6" with the following parameter:
+    Info (12134): Parameter "LPM_CVALUE" = "0"
+    Info (12134): Parameter "LPM_WIDTH" = "4"
+Info (12128): Elaborating entity "execute" for hierarchy "scp:inst|execute:inst4"
+Info (12128): Elaborating entity "CPSR" for hierarchy "scp:inst|execute:inst4|CPSR:inst2"
+Info (12128): Elaborating entity "ALU" for hierarchy "scp:inst|execute:inst4|ALU:inst1"
+Info (12128): Elaborating entity "SYNCHRONIZER" for hierarchy "SYNCHRONIZER:inst4"
+Info (12128): Elaborating entity "ADDRESSDECODER" for hierarchy "ADDRESSDECODER:inst5"
+Info (12128): Elaborating entity "REG10" for hierarchy "REG10:inst3"
+Info (12128): Elaborating entity "dmem" for hierarchy "dmem:inst6"
+Info (12128): Elaborating entity "LED" for hierarchy "LED:inst7"
+Info (12128): Elaborating entity "REG32" for hierarchy "LED:inst7|REG32:inst"
+Info (12128): Elaborating entity "seg7" for hierarchy "seg7:inst8"
+Info (12128): Elaborating entity "SEG7DECODE" for hierarchy "seg7:inst8|SEG7DECODE:inst"
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "dmem:inst6|MEMARRAY" is uninferred due to asynchronous read logic File: C:/CPE1510/goetsch-leigh-scp_10/dmem.vhd Line: 55
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "SEG0[7]" is stuck at VCC
+    Warning (13410): Pin "SEG1[7]" is stuck at VCC
+    Warning (13410): Pin "SEG2[7]" is stuck at VCC
+    Warning (13410): Pin "SEG3[7]" is stuck at VCC
+    Warning (13410): Pin "SEG4[7]" is stuck at VCC
+    Warning (13410): Pin "SEG5[7]" is stuck at VCC
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 4611 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
+    Info (21059): Implemented 303 output pins
+    Info (21061): Implemented 4296 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 4824 megabytes
+    Info: Processing ended: Thu May 02 11:56:49 2024
+    Info: Elapsed time: 00:00:59
+    Info: Total CPU time (on all processors): 00:01:10
+
+

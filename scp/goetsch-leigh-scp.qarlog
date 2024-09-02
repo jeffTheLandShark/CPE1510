@@ -1,0 +1,36 @@
+Quartus Prime Archive log --	C:/CPE1510/scp/goetsch-leigh-scp.qarlog
+
+Archive:	C:/CPE1510/scp/goetsch-leigh-scp.qar
+Date:		Thu Apr 25 11:47:57 2024
+Quartus Prime		18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/CPE1510/scp/Waveform.vwf
+C:/CPE1510/scp/adder.vhd
+C:/CPE1510/scp/alu.vhd
+C:/CPE1510/scp/control.vhd
+C:/CPE1510/scp/cpsr.vhd
+C:/CPE1510/scp/decode.bdf
+C:/CPE1510/scp/dmem.vhd
+C:/CPE1510/scp/execute.bdf
+C:/CPE1510/scp/extender.vhd
+C:/CPE1510/scp/fetch.bdf
+C:/CPE1510/scp/irom.vhd
+C:/CPE1510/scp/pc.vhd
+C:/CPE1510/scp/regfile.vhd
+C:/CPE1510/scp/rotator.vhd
+C:/CPE1510/scp/scp.bdf
+C:/CPE1510/scp/scp.qpf
+C:/CPE1510/scp/scp.qsf
+C:/CPE1510/scp/shifter.vhd
+c:/intelfpga_lite/18.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 19 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Thu Apr 25 11:49:14 2024
+Source archive file:	C:/CPE1510/scp/goetsch-leigh-scp.qar
+Archive was extracted into	C:/CPE1510/scp/goetsch-leigh-scp_restored/
+		 - successfully.

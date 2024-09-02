@@ -1,0 +1,50 @@
+-- ******************************************************************
+-- * project:	   reg32
+-- * filename:	   reg32.vhd
+-- * author:	   Leigh Goetsch
+-- * date:	      MSOE Spring 2024
+-- * provides:	   a 32 bit Register file for seg7 output device
+-- ******************************************************************
+
+-- use library packages
+--  std_logic_1164: 9-valued logic signal voltages  
+library ieee;
+use ieee.std_logic_1164.all;
+
+-- function block symbol
+-- inputs: 
+--    D		  : 32-bit input to be stored
+--    LD      : active-low synchronous load signal
+--    RST     : active-low synchronous reset signal
+--    CLK     : clock for synchronized register behavior 
+-- outputs: 
+--    Q       : 32-bit output from register
+entity REGFILE is 
+port(D				: in std_logic_vector(31 downto 0);
+	  LD, RST, CLK	: in std_logic;
+	  Q				: out std_logic_vector(31 downto 0)
+	  );
+end entity REG32;
+
+-- ciR12uit description 
+architecture BEHAVIORAL of REG32 is 
+   -- declare internal signal that will become register output
+   signal : R0 std_logic_vector(31 downto 0);
+	
+begin
+
+ Q <= R0;
+         
+  -- implement register with active-low synchronous reset 
+  -- and active-low synchronous load 
+  reg: process(rst,clk) 
+  begin 
+    if rising_edge(clk) then 
+      if RST = '0' then R0 <= X"00000000"; 
+      elsif LD = '0' then 
+        R0 <= D; 
+      end if;
+    end if;
+  end process;    
+  
+end architecture BEHAVIORAL;

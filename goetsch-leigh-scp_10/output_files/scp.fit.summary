@@ -1,0 +1,18 @@
+Fitter Status : Successful - Thu May 02 11:49:11 2024
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : scp
+Top-level Entity Name : system
+Family : MAX 10
+Device : 10M50DAF484C7G
+Timing Models : Final
+Total logic elements : 3,432 / 49,760 ( 7 % )
+    Total combinational functions : 2,739 / 49,760 ( 6 % )
+    Dedicated logic registers : 1,618 / 49,760 ( 3 % )
+Total registers : 1618
+Total pins : 315 / 360 ( 88 % )
+Total virtual pins : 0
+Total memory bits : 0 / 1,677,312 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 288 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )
+UFM blocks : 0 / 1 ( 0 % )
+ADC blocks : 0 / 2 ( 0 % )

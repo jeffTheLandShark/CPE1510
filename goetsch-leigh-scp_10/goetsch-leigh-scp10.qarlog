@@ -1,0 +1,41 @@
+Quartus Prime Archive log --	C:/CPE1510/goetsch-leigh-scp_10/goetsch-leigh-scp10.qarlog
+
+Archive:	C:/CPE1510/goetsch-leigh-scp_10/goetsch-leigh-scp10.qar
+Date:		Thu May 02 11:55:20 2024
+Quartus Prime		18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/CPE1510/goetsch-leigh-scp_10/LED.bdf
+C:/CPE1510/goetsch-leigh-scp_10/SDC1.sdc
+C:/CPE1510/goetsch-leigh-scp_10/SYNCHRONIZER.bdf
+C:/CPE1510/goetsch-leigh-scp_10/Waveform1.vwf
+C:/CPE1510/goetsch-leigh-scp_10/adder.vhd
+C:/CPE1510/goetsch-leigh-scp_10/addressdecoder.vhd
+C:/CPE1510/goetsch-leigh-scp_10/alu.vhd
+C:/CPE1510/goetsch-leigh-scp_10/assignment_defaults.qdf
+C:/CPE1510/goetsch-leigh-scp_10/control.vhd
+C:/CPE1510/goetsch-leigh-scp_10/cpsr.vhd
+C:/CPE1510/goetsch-leigh-scp_10/decode.bdf
+C:/CPE1510/goetsch-leigh-scp_10/dmem.vhd
+C:/CPE1510/goetsch-leigh-scp_10/execute.bdf
+C:/CPE1510/goetsch-leigh-scp_10/extender.vhd
+C:/CPE1510/goetsch-leigh-scp_10/fetch.bdf
+C:/CPE1510/goetsch-leigh-scp_10/irom.vhd
+C:/CPE1510/goetsch-leigh-scp_10/pc.vhd
+C:/CPE1510/goetsch-leigh-scp_10/reg10.vhd
+C:/CPE1510/goetsch-leigh-scp_10/reg32.vhd
+C:/CPE1510/goetsch-leigh-scp_10/regfile.vhd
+C:/CPE1510/goetsch-leigh-scp_10/rotator.vhd
+C:/CPE1510/goetsch-leigh-scp_10/scp.bdf
+C:/CPE1510/goetsch-leigh-scp_10/scp.qpf
+C:/CPE1510/goetsch-leigh-scp_10/scp.qsf
+C:/CPE1510/goetsch-leigh-scp_10/scp10.tcl
+C:/CPE1510/goetsch-leigh-scp_10/scp_assignment_defaults.qdf
+C:/CPE1510/goetsch-leigh-scp_10/seg7.bdf
+C:/CPE1510/goetsch-leigh-scp_10/seg7decode.vhd
+C:/CPE1510/goetsch-leigh-scp_10/shifter.vhd
+C:/CPE1510/goetsch-leigh-scp_10/system.bdf
+	======= Total: 30 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

@@ -1,0 +1,76 @@
+# do scp.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:40:47 on May 05,2024
+# vcom -work work scp.vho 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Loading package fiftyfivenm_atom_pack
+# -- Loading package fiftyfivenm_components
+# -- Compiling entity system
+# -- Compiling architecture structure of system
+# End time: 20:40:48 on May 05,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:40:48 on May 05,2024
+# vcom -work work Waveform1.vwf.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity system_vhd_vec_tst
+# -- Compiling architecture system_arch of system_vhd_vec_tst
+# End time: 20:40:48 on May 05,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -novopt -c -t 1ps -L fiftyfivenm -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.system_vhd_vec_tst 
+# Start time: 20:40:48 on May 05,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.system_vhd_vec_tst(system_arch)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading altera.dffeas_pack
+# Loading altera.altera_primitives_components
+# Loading fiftyfivenm.fiftyfivenm_atom_pack(body)
+# Loading fiftyfivenm.fiftyfivenm_components
+# Loading work.system(structure)
+# Loading fiftyfivenm.fiftyfivenm_io_obuf(behavior)
+# Loading fiftyfivenm.fiftyfivenm_io_ibuf(behavior)
+# Loading fiftyfivenm.fiftyfivenm_lcell_comb(vital_lcell_comb)
+# Loading altera.dffeas(vital_dffeas)
+# ** Warning: Design size of 549835 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# after#33
+# Simulation time: 110000 ps
+# Simulation time: 110000 ps
+# Simulation time: 110000 ps
+# Simulation time: 110000 ps
+# Simulation time: 110000 ps
+# Simulation time: 110000 ps
+# Simulation time: 110000 ps
+# Simulation time: 110000 ps
+# Simulation time: 1450000 ps
+# Simulation time: 1450000 ps
+# Simulation time: 1450000 ps
+# Simulation time: 1450000 ps
+# Simulation time: 1450000 ps
+# Simulation time: 1450000 ps
+# Simulation time: 1450000 ps
+# Simulation time: 1450000 ps
+# Simulation time: 2750000 ps
+# Simulation time: 2750000 ps
+# Simulation time: 2750000 ps
+# Simulation time: 2750000 ps
+# Simulation time: 2750000 ps
+# Simulation time: 2750000 ps
+# Simulation time: 2750000 ps
+# Simulation time: 2750000 ps
+# Simulation time: 3850000 ps
+# Simulation time: 3850000 ps
+# End time: 20:41:56 on May 05,2024, Elapsed time: 0:01:08
+# Errors: 0, Warnings: 1

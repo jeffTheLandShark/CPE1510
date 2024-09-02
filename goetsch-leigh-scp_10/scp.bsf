@@ -1,0 +1,218 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 16 16 320 464)
+	(text "scp" (rect 5 0 28 20)(font "Intel Clear" (font_size 8)))
+	(text "inst" (rect 8 425 31 444)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "MEMDATAIN[31..0]" (rect 0 0 133 20)(font "Intel Clear" (font_size 8)))
+		(text "MEMDATAIN[31..0]" (rect 21 27 154 47)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "RST" (rect 0 0 28 20)(font "Intel Clear" (font_size 8)))
+		(text "RST" (rect 21 43 49 63)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "CLK" (rect 0 0 27 20)(font "Intel Clear" (font_size 8)))
+		(text "CLK" (rect 21 59 48 79)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 304 32)
+		(output)
+		(text "MEMADDR[31..0]" (rect 0 0 119 20)(font "Intel Clear" (font_size 8)))
+		(text "MEMADDR[31..0]" (rect 164 27 283 47)(font "Intel Clear" (font_size 8)))
+		(line (pt 304 32)(pt 288 32)(line_width 3))
+	)
+	(port
+		(pt 304 48)
+		(output)
+		(text "MEMDATA[31..0]" (rect 0 0 118 20)(font "Intel Clear" (font_size 8)))
+		(text "MEMDATA[31..0]" (rect 165 43 283 63)(font "Intel Clear" (font_size 8)))
+		(line (pt 304 48)(pt 288 48)(line_width 3))
+	)
+	(port
+		(pt 304 64)
+		(output)
+		(text "WD4[31..0]" (rect 0 0 79 20)(font "Intel Clear" (font_size 8)))
+		(text "WD4[31..0]" (rect 204 59 283 79)(font "Intel Clear" (font_size 8)))
+		(line (pt 304 64)(pt 288 64)(line_width 3))
+	)
+	(port
+		(pt 304 80)
+		(output)
+		(text "PCSEL" (rect 0 0 44 20)(font "Intel Clear" (font_size 8)))
+		(text "PCSEL" (rect 239 75 283 95)(font "Intel Clear" (font_size 8)))
+		(line (pt 304 80)(pt 288 80))
+	)
+	(port
+		(pt 304 96)
+		(output)
+		(text "A3SEL" (rect 0 0 44 20)(font "Intel Clear" (font_size 8)))
+		(text "A3SEL" (rect 239 91 283 111)(font "Intel Clear" (font_size 8)))
+		(line (pt 304 96)(pt 288 96))
+	)
+	(port
+		(pt 304 112)
+		(output)
+		(text "ROTSEL" (rect 0 0 56 20)(font "Intel Clear" (font_size 8)))
+		(text "ROTSEL" (rect 227 107 283 127)(font "Intel Clear" (font_size 8)))
+		(line (pt 304 112)(pt 288 112))
+	)
+	(port
+		(pt 304 128)
+		(output)
+		(text "SHAMTSEL" (rect 0 0 77 20)(font "Intel Clear" (font_size 8)))
+		(text "SHAMTSEL" (rect 206 123 283 143)(font "Intel Clear" (font_size 8)))
+		(line (pt 304 128)(pt 288 128))
+	)
+	(port
+		(pt 304 144)
+		(output)
+		(text "SRC2SEL" (rect 0 0 63 20)(font "Intel Clear" (font_size 8)))
+		(text "SRC2SEL" (rect 220 139 283 159)(font "Intel Clear" (font_size 8)))
+		(line (pt 304 144)(pt 288 144))
+	)
+	(port
+		(pt 304 160)
+		(output)
+		(text "REGWR" (rect 0 0 51 20)(font "Intel Clear" (font_size 8)))
+		(text "REGWR" (rect 232 155 283 175)(font "Intel Clear" (font_size 8)))
+		(line (pt 304 160)(pt 288 160))
+	)
+	(port
+		(pt 304 176)
+		(output)
+		(text "ALUS[2..0]" (rect 0 0 73 20)(font "Intel Clear" (font_size 8)))
+		(text "ALUS[2..0]" (rect 210 171 283 191)(font "Intel Clear" (font_size 8)))
+		(line (pt 304 176)(pt 288 176)(line_width 3))
+	)
+	(port
+		(pt 304 192)
+		(output)
+		(text "CPSRWR" (rect 0 0 61 20)(font "Intel Clear" (font_size 8)))
+		(text "CPSRWR" (rect 222 187 283 207)(font "Intel Clear" (font_size 8)))
+		(line (pt 304 192)(pt 288 192))
+	)
+	(port
+		(pt 304 208)
+		(output)
+		(text "MEMWR" (rect 0 0 57 20)(font "Intel Clear" (font_size 8)))
+		(text "MEMWR" (rect 226 203 283 223)(font "Intel Clear" (font_size 8)))
+		(line (pt 304 208)(pt 288 208))
+	)
+	(port
+		(pt 304 224)
+		(output)
+		(text "MEMRD" (rect 0 0 54 20)(font "Intel Clear" (font_size 8)))
+		(text "MEMRD" (rect 229 219 283 239)(font "Intel Clear" (font_size 8)))
+		(line (pt 304 224)(pt 288 224))
+	)
+	(port
+		(pt 304 240)
+		(output)
+		(text "WD4SEL" (rect 0 0 60 20)(font "Intel Clear" (font_size 8)))
+		(text "WD4SEL" (rect 223 235 283 255)(font "Intel Clear" (font_size 8)))
+		(line (pt 304 240)(pt 288 240))
+	)
+	(port
+		(pt 304 256)
+		(output)
+		(text "SRC1[31..0]" (rect 0 0 82 20)(font "Intel Clear" (font_size 8)))
+		(text "SRC1[31..0]" (rect 201 251 283 271)(font "Intel Clear" (font_size 8)))
+		(line (pt 304 256)(pt 288 256)(line_width 3))
+	)
+	(port
+		(pt 304 272)
+		(output)
+		(text "SRC2[31..0]" (rect 0 0 82 20)(font "Intel Clear" (font_size 8)))
+		(text "SRC2[31..0]" (rect 201 267 283 287)(font "Intel Clear" (font_size 8)))
+		(line (pt 304 272)(pt 288 272)(line_width 3))
+	)
+	(port
+		(pt 304 288)
+		(output)
+		(text "ALUF[31..0]" (rect 0 0 81 20)(font "Intel Clear" (font_size 8)))
+		(text "ALUF[31..0]" (rect 202 283 283 303)(font "Intel Clear" (font_size 8)))
+		(line (pt 304 288)(pt 288 288)(line_width 3))
+	)
+	(port
+		(pt 304 304)
+		(output)
+		(text "C" (rect 0 0 9 20)(font "Intel Clear" (font_size 8)))
+		(text "C" (rect 274 299 283 319)(font "Intel Clear" (font_size 8)))
+		(line (pt 304 304)(pt 288 304))
+	)
+	(port
+		(pt 304 320)
+		(output)
+		(text "V" (rect 0 0 9 20)(font "Intel Clear" (font_size 8)))
+		(text "V" (rect 274 315 283 335)(font "Intel Clear" (font_size 8)))
+		(line (pt 304 320)(pt 288 320))
+	)
+	(port
+		(pt 304 336)
+		(output)
+		(text "N" (rect 0 0 10 20)(font "Intel Clear" (font_size 8)))
+		(text "N" (rect 273 331 283 351)(font "Intel Clear" (font_size 8)))
+		(line (pt 304 336)(pt 288 336))
+	)
+	(port
+		(pt 304 352)
+		(output)
+		(text "Z" (rect 0 0 9 20)(font "Intel Clear" (font_size 8)))
+		(text "Z" (rect 274 347 283 367)(font "Intel Clear" (font_size 8)))
+		(line (pt 304 352)(pt 288 352))
+	)
+	(port
+		(pt 304 368)
+		(output)
+		(text "PC4[31..0]" (rect 0 0 73 20)(font "Intel Clear" (font_size 8)))
+		(text "PC4[31..0]" (rect 210 363 283 383)(font "Intel Clear" (font_size 8)))
+		(line (pt 304 368)(pt 288 368)(line_width 3))
+	)
+	(port
+		(pt 304 384)
+		(output)
+		(text "BRADDR[31..0]" (rect 0 0 103 20)(font "Intel Clear" (font_size 8)))
+		(text "BRADDR[31..0]" (rect 180 379 283 399)(font "Intel Clear" (font_size 8)))
+		(line (pt 304 384)(pt 288 384)(line_width 3))
+	)
+	(port
+		(pt 304 400)
+		(output)
+		(text "IBUS[31..0]" (rect 0 0 79 20)(font "Intel Clear" (font_size 8)))
+		(text "IBUS[31..0]" (rect 204 395 283 415)(font "Intel Clear" (font_size 8)))
+		(line (pt 304 400)(pt 288 400)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 288 432))
+	)
+)

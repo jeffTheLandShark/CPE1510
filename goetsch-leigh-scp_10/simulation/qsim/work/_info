@@ -1,0 +1,147 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/CPE1510/goetsch-leigh-scp_10/simulation/qsim
+Ehard_block
+Z1 w1714666365
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx11 fiftyfivenm 21 fiftyfivenm_atom_pack 0 22 7d5Xo;QBOkc31OfQTzSXV0
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z7 DPx11 fiftyfivenm 22 fiftyfivenm_components 0 22 IfY7Mh2WPBc;@7U@3<I^[0
+R0
+Z8 8scp.vho
+Z9 Fscp.vho
+l0
+L34
+V8_BbEmGd;OHS6h@;gFc7W3
+!s100 ROH=D<N4CT6aCZ<37A[_?0
+Z10 OV;C;10.5b;63
+32
+Z11 !s110 1714666367
+!i10b 1
+Z12 !s108 1714666367.000000
+Z13 !s90 -work|work|scp.vho|
+Z14 !s107 scp.vho|
+!i113 1
+Z15 o-work work
+Z16 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 10 hard_block 0 22 8_BbEmGd;OHS6h@;gFc7W3
+l75
+L53
+Vg=W`CQ>24lhYF71zFSkY43
+!s100 zW6ML5NVY?Ai`]`n2XhME3
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Esystem
+Z17 w1714959647
+R3
+R7
+R2
+Z18 DPx6 altera 11 dffeas_pack 0 22 :S1C`o89Vbe5bV6`:6CaB3
+R4
+R5
+R6
+Z19 DPx6 altera 28 altera_primitives_components 0 22 z?[99Tn<@QGNik3V1c6ah1
+R0
+R8
+R9
+l0
+L36
+VKTPGdhHFY^[liU_c0iacX0
+!s100 BD9bDi3jjQ6_n6o0iNo?c1
+R10
+32
+!s110 1714959647
+!i10b 1
+Z20 !s108 1714959647.000000
+R13
+R14
+!i113 1
+R15
+R16
+Astructure
+R3
+R7
+R2
+R18
+R4
+R5
+R6
+R19
+DEx4 work 6 system 0 22 KTPGdhHFY^[liU_c0iacX0
+l4366
+L77
+V5Hh6>ML[R]NjcB6WCYC:O1
+!s100 PUgOl;1>>nm=Mh6z5elK81
+R10
+32
+Z21 !s110 1714959648
+!i10b 1
+R20
+R13
+R14
+!i113 1
+R15
+R16
+Esystem_vhd_vec_tst
+Z22 w1714959645
+R5
+R6
+R0
+Z23 8Waveform1.vwf.vht
+Z24 FWaveform1.vwf.vht
+l0
+L31
+V;1CTg2YiJh@33J9m>i:bz0
+!s100 YAMJTFAR3leMVNQSF`kb@2
+R10
+32
+R21
+!i10b 1
+Z25 !s108 1714959648.000000
+Z26 !s90 -work|work|Waveform1.vwf.vht|
+Z27 !s107 Waveform1.vwf.vht|
+!i113 1
+R15
+R16
+Asystem_arch
+R5
+R6
+Z28 DEx4 work 18 system_vhd_vec_tst 0 22 ;1CTg2YiJh@33J9m>i:bz0
+l112
+L33
+Z29 V`4TG]JG;Vj7OhV2YMlSon1
+Z30 !s100 hRk`8OXmfFn<K85@O9Noe0
+R10
+32
+R21
+!i10b 1
+R25
+R26
+R27
+!i113 1
+R15
+R16

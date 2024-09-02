@@ -1,0 +1,555 @@
+ -- Copyright (C) 2018  Intel Corporation. All rights reserved.
+ -- Your use of Intel Corporation's design tools, logic functions 
+ -- and other software and tools, and its AMPP partner logic 
+ -- functions, and any output files from any of the foregoing 
+ -- (including device programming or simulation files), and any 
+ -- associated documentation or information are expressly subject 
+ -- to the terms and conditions of the Intel Program License 
+ -- Subscription Agreement, the Intel Quartus Prime License Agreement,
+ -- the Intel FPGA IP License Agreement, or other applicable license
+ -- agreement, including, without limitation, that your use is for
+ -- the sole purpose of programming logic devices manufactured by
+ -- Intel and sold by Intel or its authorized distributors.  Please
+ -- refer to the applicable agreement for further details.
+ -- 
+ -- This is a Quartus Prime output file. It is for reporting purposes only, and is
+ -- not intended for use as a Quartus Prime input file. This file cannot be used
+ -- to make Quartus Prime pin assignments - for instructions on how to make pin
+ -- assignments, please see Quartus Prime help.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- NC            : No Connect. This pin has no internal connection to the device.
+ -- DNU           : Do Not Use. This pin MUST NOT be connected.
+ -- VCCINT        : Dedicated power pin, which MUST be connected to VCC  (1.2V).
+ -- VCCIO         : Dedicated power pin, which MUST be connected to VCC
+ --                 of its bank.
+ --                  Bank 1A:       2.5V
+ --                  Bank 1B:       2.5V
+ --                  Bank 2:       2.5V
+ --                  Bank 3:       2.5V
+ --                  Bank 4:       2.5V
+ --                  Bank 5:       2.5V
+ --                  Bank 6:       2.5V
+ --                  Bank 7:       2.5V
+ --                  Bank 8:       2.5V
+ -- GND           : Dedicated ground pin. Dedicated GND pins MUST be connected to GND.
+ --                  It can also be used to report unused dedicated pins. The connection
+ --                  on the board for unused dedicated pins depends on whether this will
+ --                  be used in a future design. One example is device migration. When
+ --                  using device migration, refer to the device pin-tables. If it is a
+ --                  GND pin in the pin table or if it will not be used in a future design
+ --                  for another purpose the it MUST be connected to GND. If it is an unused
+ --                  dedicated pin, then it can be connected to a valid signal on the board
+ --                  (low, high, or toggling) if that signal is required for a different
+ --                  revision of the design.
+ -- GND+          : Unused input pin. It can also be used to report unused dual-purpose pins.
+ --                  This pin should be connected to GND. It may also be connected  to a
+ --                  valid signal  on the board  (low, high, or toggling)  if that signal
+ --                  is required for a different revision of the design.
+ -- GND*          : Unused  I/O  pin. Connect each pin marked GND* directly to GND
+ --                  or leave it unconnected.
+ -- RESERVED      : Unused I/O pin, which MUST be left unconnected.
+ -- RESERVED_INPUT    : Pin is tri-stated and should be connected to the board.
+ -- RESERVED_INPUT_WITH_WEAK_PULLUP    : Pin is tri-stated with internal weak pull-up resistor.
+ -- RESERVED_INPUT_WITH_BUS_HOLD       : Pin is tri-stated with bus-hold circuitry.
+ -- RESERVED_OUTPUT_DRIVEN_HIGH        : Pin is output driven high.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- Pin directions (input, output or bidir) are based on device operating in user mode.
+ ---------------------------------------------------------------------------------
+
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+CHIP  "scp"  ASSIGNED TO AN: 10M50DAF484C7G
+
+Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
+-------------------------------------------------------------------------------------------------------------
+GND                          : A1        : gnd    :                   :         :           :                
+PC4[15]                      : A2        : output : 2.5 V             :         : 8         : N              
+PC4[10]                      : A3        : output : 2.5 V             :         : 8         : N              
+SRC1[20]                     : A4        : output : 2.5 V             :         : 8         : N              
+ROTSEL                       : A5        : output : 2.5 V             :         : 8         : N              
+SRC2[8]                      : A6        : output : 2.5 V             :         : 8         : N              
+WD4[24]                      : A7        : output : 2.5 V             :         : 7         : N              
+LEDS[0]                      : A8        : output : 2.5 V             :         : 7         : Y              
+LEDS[1]                      : A9        : output : 2.5 V             :         : 7         : Y              
+LEDS[2]                      : A10       : output : 2.5 V             :         : 7         : Y              
+LEDS[8]                      : A11       : output : 2.5 V             :         : 7         : Y              
+SLIDERS[4]                   : A12       : input  : 2.5 V             :         : 7         : Y              
+SLIDERS[6]                   : A13       : input  : 2.5 V             :         : 7         : Y              
+SLIDERS[7]                   : A14       : input  : 2.5 V             :         : 7         : Y              
+ALUF[23]                     : A15       : output : 2.5 V             :         : 7         : N              
+SEG1[7]                      : A16       : output : 2.5 V             :         : 7         : Y              
+SEG1[4]                      : A17       : output : 2.5 V             :         : 7         : Y              
+SEG1[5]                      : A18       : output : 2.5 V             :         : 7         : Y              
+SEG2[7]                      : A19       : output : 2.5 V             :         : 7         : Y              
+SEG2[1]                      : A20       : output : 2.5 V             :         : 7         : Y              
+SEG2[3]                      : A21       : output : 2.5 V             :         : 6         : Y              
+GND                          : A22       : gnd    :                   :         :           :                
+BRADDR[14]                   : AA1       : output : 2.5 V             :         : 3         : N              
+SRC1[25]                     : AA2       : output : 2.5 V             :         : 3         : N              
+BRADDR[21]                   : AA3       : output : 2.5 V             :         : 3         : N              
+GND                          : AA4       : gnd    :                   :         :           :                
+PC4[23]                      : AA5       : output : 2.5 V             :         : 3         : N              
+PC4[30]                      : AA6       : output : 2.5 V             :         : 3         : N              
+SRC2[0]                      : AA7       : output : 2.5 V             :         : 3         : N              
+REGWR                        : AA8       : output : 2.5 V             :         : 3         : N              
+WD4[26]                      : AA9       : output : 2.5 V             :         : 3         : N              
+SRC1[2]                      : AA10      : output : 2.5 V             :         : 3         : N              
+CPSRWR                       : AA11      : output : 2.5 V             :         : 4         : N              
+SRC2[28]                     : AA12      : output : 2.5 V             :         : 4         : N              
+WD4[9]                       : AA13      : output : 2.5 V             :         : 4         : N              
+WD4[21]                      : AA14      : output : 2.5 V             :         : 4         : N              
+ALUF[12]                     : AA15      : output : 2.5 V             :         : 4         : N              
+ALUF[17]                     : AA16      : output : 2.5 V             :         : 4         : N              
+IBUS[11]                     : AA17      : output : 2.5 V             :         : 4         : N              
+GND                          : AA18      : gnd    :                   :         :           :                
+SRC1[27]                     : AA19      : output : 2.5 V             :         : 4         : N              
+SRC1[6]                      : AA20      : output : 2.5 V             :         : 4         : N              
+GND*                         : AA21      :        :                   :         : 5         :                
+BRADDR[22]                   : AA22      : output : 2.5 V             :         : 5         : N              
+GND                          : AB1       : gnd    :                   :         :           :                
+IBUS[14]                     : AB2       : output : 2.5 V             :         : 3         : N              
+IBUS[20]                     : AB3       : output : 2.5 V             :         : 3         : N              
+BRADDR[24]                   : AB4       : output : 2.5 V             :         : 3         : N              
+BRADDR[0]                    : AB5       : output : 2.5 V             :         : 3         : N              
+WD4[31]                      : AB6       : output : 2.5 V             :         : 3         : N              
+BRADDR[1]                    : AB7       : output : 2.5 V             :         : 3         : N              
+WD4[28]                      : AB8       : output : 2.5 V             :         : 3         : N              
+ALUF[22]                     : AB9       : output : 2.5 V             :         : 3         : N              
+SRC2[29]                     : AB10      : output : 2.5 V             :         : 4         : N              
+WD4[2]                       : AB11      : output : 2.5 V             :         : 4         : N              
+WD4[27]                      : AB12      : output : 2.5 V             :         : 4         : N              
+SRC2[7]                      : AB13      : output : 2.5 V             :         : 4         : N              
+SRC2[26]                     : AB14      : output : 2.5 V             :         : 4         : N              
+C                            : AB15      : output : 2.5 V             :         : 4         : N              
+WD4[23]                      : AB16      : output : 2.5 V             :         : 4         : N              
+ALUF[8]                      : AB17      : output : 2.5 V             :         : 4         : N              
+N                            : AB18      : output : 2.5 V             :         : 4         : N              
+IBUS[9]                      : AB19      : output : 2.5 V             :         : 4         : N              
+IBUS[8]                      : AB20      : output : 2.5 V             :         : 4         : N              
+LD2                          : AB21      : output : 2.5 V             :         : 4         : N              
+GND                          : AB22      : gnd    :                   :         :           :                
+IBUS[2]                      : B1        : output : 2.5 V             :         : 8         : N              
+BRADDR[12]                   : B2        : output : 2.5 V             :         : 8         : N              
+BRADDR[15]                   : B3        : output : 2.5 V             :         : 8         : N              
+PC4[5]                       : B4        : output : 2.5 V             :         : 8         : N              
+PC4[1]                       : B5        : output : 2.5 V             :         : 8         : N              
+GND                          : B6        : gnd    :                   :         :           :                
+WD4[20]                      : B7        : output : 2.5 V             :         : 8         : N              
+SYSRST                       : B8        : input  : 2.5 V             :         : 7         : Y              
+GND                          : B9        : gnd    :                   :         :           :                
+LEDS[3]                      : B10       : output : 2.5 V             :         : 7         : Y              
+LEDS[9]                      : B11       : output : 2.5 V             :         : 7         : Y              
+SLIDERS[5]                   : B12       : input  : 2.5 V             :         : 7         : Y              
+GND                          : B13       : gnd    :                   :         :           :                
+SLIDERS[8]                   : B14       : input  : 2.5 V             :         : 7         : Y              
+ALUF[6]                      : B15       : output : 2.5 V             :         : 7         : N              
+SEG1[3]                      : B16       : output : 2.5 V             :         : 7         : Y              
+SEG1[6]                      : B17       : output : 2.5 V             :         : 7         : Y              
+GND                          : B18       : gnd    :                   :         :           :                
+SEG2[2]                      : B19       : output : 2.5 V             :         : 7         : Y              
+SEG2[0]                      : B20       : output : 2.5 V             :         : 6         : Y              
+SEG2[4]                      : B21       : output : 2.5 V             :         : 6         : Y              
+SEG2[6]                      : B22       : output : 2.5 V             :         : 6         : Y              
+BRADDR[7]                    : C1        : output : 2.5 V             :         : 1B        : N              
+SRC1[13]                     : C2        : output : 2.5 V             :         : 8         : N              
+ALUS[0]                      : C3        : output : 2.5 V             :         : 8         : N              
+BRADDR[9]                    : C4        : output : 2.5 V             :         : 8         : N              
+PC4[0]                       : C5        : output : 2.5 V             :         : 8         : N              
+IBUS[30]                     : C6        : output : 2.5 V             :         : 8         : N              
+LD1                          : C7        : output : 2.5 V             :         : 8         : N              
+SRC2[5]                      : C8        : output : 2.5 V             :         : 8         : N              
+WD4[12]                      : C9        : output : 2.5 V             :         : 7         : N              
+SLIDERS[0]                   : C10       : input  : 2.5 V             :         : 7         : Y              
+SLIDERS[1]                   : C11       : input  : 2.5 V             :         : 7         : Y              
+SLIDERS[3]                   : C12       : input  : 2.5 V             :         : 7         : Y              
+LEDS[5]                      : C13       : output : 2.5 V             :         : 7         : Y              
+SEG0[0]                      : C14       : output : 2.5 V             :         : 7         : Y              
+SEG0[2]                      : C15       : output : 2.5 V             :         : 7         : Y              
+SEG0[3]                      : C16       : output : 2.5 V             :         : 7         : Y              
+SEG0[6]                      : C17       : output : 2.5 V             :         : 7         : Y              
+SEG1[0]                      : C18       : output : 2.5 V             :         : 7         : Y              
+SEG3[3]                      : C19       : output : 2.5 V             :         : 7         : Y              
+SEG3[4]                      : C20       : output : 2.5 V             :         : 6         : Y              
+GND*                         : C21       :        :                   :         : 6         :                
+SEG2[5]                      : C22       : output : 2.5 V             :         : 6         : Y              
+IBUS[21]                     : D1        : output : 2.5 V             :         : 1B        : N              
+IBUS[28]                     : D2        : output : 2.5 V             :         : 1B        : N              
+PC4[3]                       : D3        : output : 2.5 V             :         : 1B        : N              
+GND                          : D4        : gnd    :                   :         :           :                
+IBUS[5]                      : D5        : output : 2.5 V             :         : 8         : N              
+BRADDR[26]                   : D6        : output : 2.5 V             :         : 8         : N              
+IBUS[31]                     : D7        : output : 2.5 V             :         : 8         : N              
+ALUF[13]                     : D8        : output : 2.5 V             :         : 8         : N              
+SRC2[18]                     : D9        : output : 2.5 V             :         : 8         : N              
+SRC1[15]                     : D10       : output : 2.5 V             :         : 8         : N              
+GND                          : D11       : gnd    :                   :         :           :                
+SLIDERS[2]                   : D12       : input  : 2.5 V             :         : 7         : Y              
+LEDS[4]                      : D13       : output : 2.5 V             :         : 7         : Y              
+LEDS[7]                      : D14       : output : 2.5 V             :         : 7         : Y              
+SEG0[7]                      : D15       : output : 2.5 V             :         : 7         : Y              
+GND                          : D16       : gnd    :                   :         :           :                
+SEG0[5]                      : D17       : output : 2.5 V             :         : 7         : Y              
+SEG1[1]                      : D18       : output : 2.5 V             :         : 6         : Y              
+SEG3[5]                      : D19       : output : 2.5 V             :         : 6         : Y              
+GND                          : D20       : gnd    :                   :         :           :                
+GND*                         : D21       :        :                   :         : 6         :                
+SEG3[7]                      : D22       : output : 2.5 V             :         : 6         : Y              
+PCSEL                        : E1        : output : 2.5 V             :         : 1B        : N              
+GND                          : E2        : gnd    :                   :         :           :                
+GND*                         : E3        :        :                   :         : 1A        :                
+IBUS[24]                     : E4        : output : 2.5 V             :         : 1A        : N              
+NC                           : E5        :        :                   :         :           :                
+IBUS[3]                      : E6        : output : 2.5 V             :         : 8         : N              
+GND                          : E7        : gnd    :                   :         :           :                
+BRADDR[27]                   : E8        : output : 2.5 V             :         : 8         : N              
+IBUS[29]                     : E9        : output : 2.5 V             :         : 8         : N              
+ALUF[16]                     : E10       : output : 2.5 V             :         : 8         : N              
+SRC2[4]                      : E11       : output : 2.5 V             :         : 8         : N              
+ALUF[18]                     : E12       : output : 2.5 V             :         : 7         : N              
+SRC1[18]                     : E13       : output : 2.5 V             :         : 7         : N              
+LEDS[6]                      : E14       : output : 2.5 V             :         : 7         : Y              
+SEG0[1]                      : E15       : output : 2.5 V             :         : 7         : Y              
+SEG0[4]                      : E16       : output : 2.5 V             :         : 7         : Y              
+SEG3[6]                      : E17       : output : 2.5 V             :         : 6         : Y              
+SEG1[2]                      : E18       : output : 2.5 V             :         : 6         : Y              
+SEG4[2]                      : E19       : output : 2.5 V             :         : 6         : Y              
+SEG4[1]                      : E20       : output : 2.5 V             :         : 6         : Y              
+SEG3[2]                      : E21       : output : 2.5 V             :         : 6         : Y              
+SEG3[1]                      : E22       : output : 2.5 V             :         : 6         : Y              
+BRADDR[2]                    : F1        : output : 2.5 V             :         : 1B        : N              
+IBUS[4]                      : F2        : output : 2.5 V             :         : 1B        : N              
+GND*                         : F3        :        :                   :         : 1A        :                
+GND*                         : F4        :        :                   :         : 1A        :                
+GND*                         : F5        :        :                   :         : 1A        :                
+NC                           : F6        :        :                   :         :           :                
+BRADDR[29]                   : F7        : output : 2.5 V             :         : 8         : N              
+~ALTERA_CONF_DONE~ / RESERVED_INPUT : F8        : input  : 2.5 V Schmitt Trigger :         : 8         : N              
+VCCIO8                       : F9        : power  :                   : 2.5V    : 8         :                
+GND                          : F10       : gnd    :                   :         :           :                
+VCCIO8                       : F11       : power  :                   : 2.5V    : 8         :                
+VCCIO7                       : F12       : power  :                   : 2.5V    : 7         :                
+GND                          : F13       : gnd    :                   :         :           :                
+VCCIO7                       : F14       : power  :                   : 2.5V    : 7         :                
+SLIDERS[9]                   : F15       : input  : 2.5 V             :         : 7         : Y              
+GND*                         : F16       :        :                   :         : 7         :                
+SEG4[7]                      : F17       : output : 2.5 V             :         : 6         : Y              
+SEG4[0]                      : F18       : output : 2.5 V             :         : 6         : Y              
+SEG4[5]                      : F19       : output : 2.5 V             :         : 6         : Y              
+SEG4[6]                      : F20       : output : 2.5 V             :         : 6         : Y              
+SEG3[0]                      : F21       : output : 2.5 V             :         : 6         : Y              
+PC4[16]                      : F22       : output : 2.5 V             :         : 6         : N              
+BRADDR[11]                   : G1        : output : 2.5 V             :         : 1B        : N              
+~ALTERA_TCK~ / RESERVED_INPUT : G2        : input  : 2.5 V Schmitt Trigger :         : 1B        : N              
+GND*                         : G3        :        :                   :         : 1A        :                
+ALUS[1]                      : G4        : output : 2.5 V             :         : 1A        : N              
+ANAIN1                       : G5        :        :                   :         :           :                
+GND                          : G6        : gnd    :                   :         :           :                
+VCCD_PLL3                    : G7        : power  :                   : 1.2V    :           :                
+GND                          : G8        : gnd    :                   :         :           :                
+~ALTERA_nSTATUS~ / RESERVED_INPUT : G9        : input  : 2.5 V Schmitt Trigger :         : 8         : N              
+VCCIO8                       : G10       : power  :                   : 2.5V    : 8         :                
+VCCIO8                       : G11       : power  :                   : 2.5V    : 8         :                
+VCCIO7                       : G12       : power  :                   : 2.5V    : 7         :                
+VCCIO7                       : G13       : power  :                   : 2.5V    : 7         :                
+VCCIO7                       : G14       : power  :                   : 2.5V    : 7         :                
+GND                          : G15       : gnd    :                   :         :           :                
+VCCD_PLL2                    : G16       : power  :                   : 1.2V    :           :                
+GND*                         : G17       :        :                   :         : 6         :                
+GND                          : G18       : gnd    :                   :         :           :                
+SRC1[14]                     : G19       : output : 2.5 V             :         : 6         : N              
+IBUS[22]                     : G20       : output : 2.5 V             :         : 6         : N              
+GND                          : G21       : gnd    :                   :         :           :                
+ALUF[3]                      : G22       : output : 2.5 V             :         : 6         : N              
+BRADDR[3]                    : H1        : output : 2.5 V             :         : 1B        : N              
+~ALTERA_TMS~ / RESERVED_INPUT_WITH_WEAK_PULLUP : H2        : input  : 2.5 V Schmitt Trigger :         : 1B        : N              
+SRC2[11]                     : H3        : output : 2.5 V             :         : 1A        : N              
+SRC1[28]                     : H4        : output : 2.5 V             :         : 1A        : N              
+REFGND                       : H5        :        :                   :         :           :                
+ADC_VREF                     : H6        :        :                   :         :           :                
+VCCA_ADC                     : H7        : power  :                   : 2.5V    :           :                
+VCCA3                        : H8        : power  :                   : 2.5V    :           :                
+~ALTERA_nCONFIG~ / RESERVED_INPUT : H9        : input  : 2.5 V Schmitt Trigger :         : 8         : N              
+~ALTERA_CONFIG_SEL~ / RESERVED_INPUT : H10       : input  : 2.5 V             :         : 8         : N              
+LD0                          : H11       : output : 2.5 V             :         : 8         : N              
+SRC2[10]                     : H12       : output : 2.5 V             :         : 7         : N              
+SRC2[17]                     : H13       : output : 2.5 V             :         : 7         : N              
+WD4[16]                      : H14       : output : 2.5 V             :         : 7         : N              
+VCCA2                        : H15       : power  :                   : 2.5V    :           :                
+VCCIO6                       : H16       : power  :                   : 2.5V    : 6         :                
+GND*                         : H17       :        :                   :         : 6         :                
+GND*                         : H18       :        :                   :         : 6         :                
+SEG4[4]                      : H19       : output : 2.5 V             :         : 6         : Y              
+GND*                         : H20       :        :                   :         : 6         :                
+SRC1[12]                     : H21       : output : 2.5 V             :         : 6         : N              
+ALUF[15]                     : H22       : output : 2.5 V             :         : 6         : N              
+SRC2SEL                      : J1        : output : 2.5 V             :         : 1B        : N              
+GND                          : J2        : gnd    :                   :         :           :                
+IBUS[25]                     : J3        : output : 2.5 V             :         : 1A        : N              
+IBUS[23]                     : J4        : output : 2.5 V             :         : 1A        : N              
+ANAIN2                       : J5        :        :                   :         :           :                
+GND                          : J6        : gnd    :                   :         :           :                
+VCCINT                       : J7        : power  :                   : 1.2V    :           :                
+IBUS[0]                      : J8        : output : 2.5 V             :         : 1A        : N              
+GND*                         : J9        :        :                   :         : 1A        :                
+WD4[13]                      : J10       : output : 2.5 V             :         : 8         : N              
+ALUF[25]                     : J11       : output : 2.5 V             :         : 7         : N              
+WD4[19]                      : J12       : output : 2.5 V             :         : 7         : N              
+SRC2[20]                     : J13       : output : 2.5 V             :         : 7         : N              
+GND*                         : J14       :        :                   :         : 6         :                
+GND*                         : J15       :        :                   :         : 6         :                
+GND                          : J16       : gnd    :                   :         :           :                
+VCCIO6                       : J17       : power  :                   : 2.5V    : 6         :                
+SEG4[3]                      : J18       : output : 2.5 V             :         : 6         : Y              
+GND                          : J19       : gnd    :                   :         :           :                
+SEG5[0]                      : J20       : output : 2.5 V             :         : 6         : Y              
+SRC2[6]                      : J21       : output : 2.5 V             :         : 6         : N              
+SRC2[14]                     : J22       : output : 2.5 V             :         : 6         : N              
+BRADDR[31]                   : K1        : output : 2.5 V             :         : 1B        : N              
+BRADDR[13]                   : K2        : output : 2.5 V             :         : 1B        : N              
+GND                          : K3        : gnd    :                   :         :           :                
+Z                            : K4        : output : 2.5 V             :         : 1A        : N              
+SRC1[23]                     : K5        : output : 2.5 V             :         : 1A        : N              
+GND*                         : K6        :        :                   :         : 1A        :                
+VCCIO1A                      : K7        : power  :                   : 2.5V    : 1A        :                
+BRADDR[6]                    : K8        : output : 2.5 V             :         : 1B        : N              
+PC4[7]                       : K9        : output : 2.5 V             :         : 1B        : N              
+GND                          : K10       : gnd    :                   :         :           :                
+VCC                          : K11       : power  :                   : 1.2V    :           :                
+GND                          : K12       : gnd    :                   :         :           :                
+VCC                          : K13       : power  :                   : 1.2V    :           :                
+GND*                         : K14       :        :                   :         : 6         :                
+GND*                         : K15       :        :                   :         : 6         :                
+VCCIO6                       : K16       : power  :                   : 2.5V    : 6         :                
+VCCIO6                       : K17       : power  :                   : 2.5V    : 6         :                
+GND*                         : K18       :        :                   :         : 6         :                
+GND*                         : K19       :        :                   :         : 6         :                
+SEG5[1]                      : K20       : output : 2.5 V             :         : 6         : Y              
+GND*                         : K21       :        :                   :         : 6         :                
+SHAMTSEL                     : K22       : output : 2.5 V             :         : 6         : N              
+PC4[31]                      : L1        : output : 2.5 V             :         : 1B        : N              
+IBUS[1]                      : L2        : output : 2.5 V             :         : 1B        : N              
+DNU                          : L3        :        :                   :         :           :                
+~ALTERA_TDI~ / RESERVED_INPUT_WITH_WEAK_PULLUP : L4        : input  : 2.5 V Schmitt Trigger :         : 1B        : N              
+GND                          : L5        : gnd    :                   :         :           :                
+VCCIO1A                      : L6        : power  :                   : 2.5V    : 1A        :                
+VCCIO1B                      : L7        : power  :                   : 2.5V    : 1B        :                
+PC4[2]                       : L8        : output : 2.5 V             :         : 1B        : N              
+BRADDR[4]                    : L9        : output : 2.5 V             :         : 1B        : N              
+VCC                          : L10       : power  :                   : 1.2V    :           :                
+VCC                          : L11       : power  :                   : 1.2V    :           :                
+VCC                          : L12       : power  :                   : 1.2V    :           :                
+GND                          : L13       : gnd    :                   :         :           :                
+GND*                         : L14       :        :                   :         : 6         :                
+GND*                         : L15       :        :                   :         : 6         :                
+VCCIO6                       : L16       : power  :                   : 2.5V    : 6         :                
+GND                          : L17       : gnd    :                   :         :           :                
+SEG5[2]                      : L18       : output : 2.5 V             :         : 6         : Y              
+SEG5[7]                      : L19       : output : 2.5 V             :         : 6         : Y              
+GND*                         : L20       :        :                   :         : 6         :                
+GND                          : L21       : gnd    :                   :         :           :                
+WD4[17]                      : L22       : output : 2.5 V             :         : 5         : N              
+PC4[18]                      : M1        : output : 2.5 V             :         : 2         : N              
+PC4[20]                      : M2        : output : 2.5 V             :         : 2         : N              
+PC4[26]                      : M3        : output : 2.5 V             :         : 1B        : N              
+PC4[11]                      : M4        : output : 2.5 V             :         : 1B        : N              
+~ALTERA_TDO~                 : M5        : output : 2.5 V             :         : 1B        : N              
+VCCIO1B                      : M6        : power  :                   : 2.5V    : 1B        :                
+GND                          : M7        : gnd    :                   :         :           :                
+PC4[29]                      : M8        : output : 2.5 V             :         : 2         : N              
+PC4[27]                      : M9        : output : 2.5 V             :         : 2         : N              
+GND                          : M10       : gnd    :                   :         :           :                
+VCC                          : M11       : power  :                   : 1.2V    :           :                
+VCC                          : M12       : power  :                   : 1.2V    :           :                
+VCC                          : M13       : power  :                   : 1.2V    :           :                
+ALUS[2]                      : M14       : output : 2.5 V             :         : 6         : N              
+ALUF[2]                      : M15       : output : 2.5 V             :         : 6         : N              
+GND                          : M16       : gnd    :                   :         :           :                
+VCCIO6                       : M17       : power  :                   : 2.5V    : 6         :                
+GND*                         : M18       :        :                   :         : 6         :                
+GND                          : M19       : gnd    :                   :         :           :                
+SEG5[4]                      : M20       : output : 2.5 V             :         : 6         : Y              
+SRC2[25]                     : M21       : output : 2.5 V             :         : 5         : N              
+SRC2[13]                     : M22       : output : 2.5 V             :         : 5         : N              
+BRADDR[20]                   : N1        : output : 2.5 V             :         : 2         : N              
+BRADDR[23]                   : N2        : output : 2.5 V             :         : 2         : N              
+PC4[19]                      : N3        : output : 2.5 V             :         : 2         : N              
+BRADDR[30]                   : N4        : output : 2.5 V             :         : 2         : N              
+BRADDR[16]                   : N5        : output : 2.5 V             :         : 2         : N              
+VCCIO2                       : N6        : power  :                   : 2.5V    : 2         :                
+VCCIO2                       : N7        : power  :                   : 2.5V    : 2         :                
+IBUS[15]                     : N8        : output : 2.5 V             :         : 2         : N              
+SRC1[11]                     : N9        : output : 2.5 V             :         : 2         : N              
+VCC                          : N10       : power  :                   : 1.2V    :           :                
+GND                          : N11       : gnd    :                   :         :           :                
+VCC                          : N12       : power  :                   : 1.2V    :           :                
+GND                          : N13       : gnd    :                   :         :           :                
+SRC1[5]                      : N14       : output : 2.5 V             :         : 6         : N              
+SRC2[15]                     : N15       : output : 2.5 V             :         : 6         : N              
+VCCIO5                       : N16       : power  :                   : 2.5V    : 5         :                
+VCCIO6                       : N17       : power  :                   : 2.5V    : 6         :                
+SEG5[3]                      : N18       : output : 2.5 V             :         : 6         : Y              
+SEG5[5]                      : N19       : output : 2.5 V             :         : 6         : Y              
+SEG5[6]                      : N20       : output : 2.5 V             :         : 6         : Y              
+WD4[25]                      : N21       : output : 2.5 V             :         : 5         : N              
+SRC2[3]                      : N22       : output : 2.5 V             :         : 5         : N              
+IBUS[7]                      : P1        : output : 2.5 V             :         : 2         : N              
+GND                          : P2        : gnd    :                   :         :           :                
+BRADDR[18]                   : P3        : output : 2.5 V             :         : 2         : N              
+PC4[13]                      : P4        : output : 2.5 V             :         : 2         : N              
+SRC2[2]                      : P5        : output : 2.5 V             :         : 2         : N              
+GND                          : P6        : gnd    :                   :         :           :                
+VCCIO2                       : P7        : power  :                   : 2.5V    : 2         :                
+GND*                         : P8        :        :                   :         : 2         :                
+PC4[4]                       : P9        : output : 2.5 V             :         : 3         : N              
+PC4[8]                       : P10       : output : 2.5 V             :         : 3         : N              
+CLK                          : P11       : input  : 2.5 V             :         : 3         : Y              
+SRC1[31]                     : P12       : output : 2.5 V             :         : 4         : N              
+WD4[15]                      : P13       : output : 2.5 V             :         : 4         : N              
+SRC1[1]                      : P14       : output : 2.5 V             :         : 5         : N              
+SRC1[30]                     : P15       : output : 2.5 V             :         : 5         : N              
+VCCIO5                       : P16       : power  :                   : 2.5V    : 5         :                
+GND                          : P17       : gnd    :                   :         :           :                
+WD4[18]                      : P18       : output : 2.5 V             :         : 5         : N              
+SRC2[23]                     : P19       : output : 2.5 V             :         : 5         : N              
+SRC2[30]                     : P20       : output : 2.5 V             :         : 5         : N              
+SRC2[1]                      : P21       : output : 2.5 V             :         : 5         : N              
+SRC2[21]                     : P22       : output : 2.5 V             :         : 5         : N              
+GND*                         : R1        :        :                   :         : 2         :                
+GND*                         : R2        :        :                   :         : 2         :                
+PC4[14]                      : R3        : output : 2.5 V             :         : 2         : N              
+BRADDR[19]                   : R4        : output : 2.5 V             :         : 2         : N              
+BRADDR[17]                   : R5        : output : 2.5 V             :         : 2         : N              
+VCCIO2                       : R6        : power  :                   : 2.5V    : 2         :                
+ALUF[31]                     : R7        : output : 2.5 V             :         : 2         : N              
+VCCA1                        : R8        : power  :                   : 2.5V    :           :                
+BRADDR[10]                   : R9        : output : 2.5 V             :         : 3         : N              
+IBUS[12]                     : R10       : output : 2.5 V             :         : 3         : N              
+WD4[1]                       : R11       : output : 2.5 V             :         : 3         : N              
+SRC1[22]                     : R12       : output : 2.5 V             :         : 4         : N              
+MEMRD                        : R13       : output : 2.5 V             :         : 4         : N              
+SRC2[24]                     : R14       : output : 2.5 V             :         : 5         : N              
+ALUF[1]                      : R15       : output : 2.5 V             :         : 5         : N              
+VCCIO5                       : R16       : power  :                   : 2.5V    : 5         :                
+VCCIO5                       : R17       : power  :                   : 2.5V    : 5         :                
+WD4[6]                       : R18       : output : 2.5 V             :         : 5         : N              
+GND                          : R19       : gnd    :                   :         :           :                
+ALUF[28]                     : R20       : output : 2.5 V             :         : 5         : N              
+GND                          : R21       : gnd    :                   :         :           :                
+SRC2[9]                      : R22       : output : 2.5 V             :         : 5         : N              
+PC4[9]                       : T1        : output : 2.5 V             :         : 2         : N              
+PC4[17]                      : T2        : output : 2.5 V             :         : 2         : N              
+SRC2[27]                     : T3        : output : 2.5 V             :         : 2         : N              
+GND                          : T4        : gnd    :                   :         :           :                
+GND*                         : T5        :        :                   :         : 2         :                
+GND*                         : T6        :        :                   :         : 2         :                
+VCCD_PLL1                    : T7        : power  :                   : 1.2V    :           :                
+GND                          : T8        : gnd    :                   :         :           :                
+VCCIO3                       : T9        : power  :                   : 2.5V    : 3         :                
+VCCIO3                       : T10       : power  :                   : 2.5V    : 3         :                
+VCCIO3                       : T11       : power  :                   : 2.5V    : 3         :                
+VCCIO4                       : T12       : power  :                   : 2.5V    : 4         :                
+VCCIO4                       : T13       : power  :                   : 2.5V    : 4         :                
+GND                          : T14       : gnd    :                   :         :           :                
+VCCA4                        : T15       : power  :                   : 2.5V    :           :                
+GND                          : T16       : gnd    :                   :         :           :                
+VCCIO5                       : T17       : power  :                   : 2.5V    : 5         :                
+ALUF[5]                      : T18       : output : 2.5 V             :         : 5         : N              
+SRC2[31]                     : T19       : output : 2.5 V             :         : 5         : N              
+SRC2[22]                     : T20       : output : 2.5 V             :         : 5         : N              
+WD4[14]                      : T21       : output : 2.5 V             :         : 5         : N              
+WD4[29]                      : T22       : output : 2.5 V             :         : 5         : N              
+WD4[7]                       : U1        : output : 2.5 V             :         : 2         : N              
+SRC2[16]                     : U2        : output : 2.5 V             :         : 2         : N              
+PC4[6]                       : U3        : output : 2.5 V             :         : 2         : N              
+SRC1[21]                     : U4        : output : 2.5 V             :         : 2         : N              
+IBUS[13]                     : U5        : output : 2.5 V             :         : 2         : N              
+IBUS[27]                     : U6        : output : 2.5 V             :         : 3         : N              
+IBUS[17]                     : U7        : output : 2.5 V             :         : 3         : N              
+VCCIO3                       : U8        : power  :                   : 2.5V    : 3         :                
+VCCIO3                       : U9        : power  :                   : 2.5V    : 3         :                
+GND                          : U10       : gnd    :                   :         :           :                
+VCCIO4                       : U11       : power  :                   : 2.5V    : 4         :                
+VCCIO4                       : U12       : power  :                   : 2.5V    : 4         :                
+GND                          : U13       : gnd    :                   :         :           :                
+VCCIO4                       : U14       : power  :                   : 2.5V    : 4         :                
+SRC1[4]                      : U15       : output : 2.5 V             :         : 4         : N              
+VCCD_PLL4                    : U16       : power  :                   : 1.2V    :           :                
+GND*                         : U17       :        :                   :         : 5         :                
+GND*                         : U18       :        :                   :         : 5         :                
+ALUF[20]                     : U19       : output : 2.5 V             :         : 5         : N              
+ALUF[11]                     : U20       : output : 2.5 V             :         : 5         : N              
+ALUF[24]                     : U21       : output : 2.5 V             :         : 5         : N              
+ALUF[21]                     : U22       : output : 2.5 V             :         : 5         : N              
+IBUS[6]                      : V1        : output : 2.5 V             :         : 2         : N              
+GND                          : V2        : gnd    :                   :         :           :                
+GND*                         : V3        :        :                   :         : 2         :                
+IBUS[16]                     : V4        : output : 2.5 V             :         : 3         : N              
+SRC1[29]                     : V5        : output : 2.5 V             :         : 3         : N              
+GND                          : V6        : gnd    :                   :         :           :                
+SRC1[0]                      : V7        : output : 2.5 V             :         : 3         : N              
+BRADDR[5]                    : V8        : output : 2.5 V             :         : 3         : N              
+WD4[11]                      : V9        : output : 2.5 V             :         : 3         : N              
+WD4[0]                       : V10       : output : 2.5 V             :         : 3         : N              
+SRC1[24]                     : V11       : output : 2.5 V             :         : 4         : N              
+WD4[4]                       : V12       : output : 2.5 V             :         : 4         : N              
+ALUF[27]                     : V13       : output : 2.5 V             :         : 4         : N              
+SRC1[3]                      : V14       : output : 2.5 V             :         : 4         : N              
+SRC1[7]                      : V15       : output : 2.5 V             :         : 4         : N              
+SRC1[9]                      : V16       : output : 2.5 V             :         : 4         : N              
+WD4[30]                      : V17       : output : 2.5 V             :         : 4         : N              
+ALUF[14]                     : V18       : output : 2.5 V             :         : 5         : N              
+GND                          : V19       : gnd    :                   :         :           :                
+GND*                         : V20       :        :                   :         : 5         :                
+ALUF[26]                     : V21       : output : 2.5 V             :         : 5         : N              
+ALUF[10]                     : V22       : output : 2.5 V             :         : 5         : N              
+IBUS[26]                     : W1        : output : 2.5 V             :         : 2         : N              
+GND*                         : W2        :        :                   :         : 2         :                
+SRC1[19]                     : W3        : output : 2.5 V             :         : 3         : N              
+A3SEL                        : W4        : output : 2.5 V             :         : 3         : N              
+SRC2[12]                     : W5        : output : 2.5 V             :         : 3         : N              
+IBUS[18]                     : W6        : output : 2.5 V             :         : 3         : N              
+PC4[28]                      : W7        : output : 2.5 V             :         : 3         : N              
+BRADDR[25]                   : W8        : output : 2.5 V             :         : 3         : N              
+BRADDR[8]                    : W9        : output : 2.5 V             :         : 3         : N              
+PC4[25]                      : W10       : output : 2.5 V             :         : 3         : N              
+WD4[8]                       : W11       : output : 2.5 V             :         : 4         : N              
+WD4[22]                      : W12       : output : 2.5 V             :         : 4         : N              
+WD4[5]                       : W13       : output : 2.5 V             :         : 4         : N              
+WD4[3]                       : W14       : output : 2.5 V             :         : 4         : N              
+SRC1[10]                     : W15       : output : 2.5 V             :         : 4         : N              
+WD4SEL                       : W16       : output : 2.5 V             :         : 4         : N              
+IBUS[10]                     : W17       : output : 2.5 V             :         : 4         : N              
+V                            : W18       : output : 2.5 V             :         : 4         : N              
+DATAS                        : W19       : output : 2.5 V             :         : 5         : N              
+GND*                         : W20       :        :                   :         : 5         :                
+GND                          : W21       : gnd    :                   :         :           :                
+ALUF[29]                     : W22       : output : 2.5 V             :         : 5         : N              
+MEMWR                        : Y1        : output : 2.5 V             :         : 3         : N              
+IBUS[19]                     : Y2        : output : 2.5 V             :         : 3         : N              
+PC4[21]                      : Y3        : output : 2.5 V             :         : 3         : N              
+PC4[12]                      : Y4        : output : 2.5 V             :         : 3         : N              
+SRC1[17]                     : Y5        : output : 2.5 V             :         : 3         : N              
+BRADDR[28]                   : Y6        : output : 2.5 V             :         : 3         : N              
+PC4[24]                      : Y7        : output : 2.5 V             :         : 3         : N              
+PC4[22]                      : Y8        : output : 2.5 V             :         : 3         : N              
+GND                          : Y9        : gnd    :                   :         :           :                
+SRC1[26]                     : Y10       : output : 2.5 V             :         : 3         : N              
+SRC1[16]                     : Y11       : output : 2.5 V             :         : 4         : N              
+GND                          : Y12       : gnd    :                   :         :           :                
+ALUF[19]                     : Y13       : output : 2.5 V             :         : 4         : N              
+WD4[10]                      : Y14       : output : 2.5 V             :         : 4         : N              
+GND                          : Y15       : gnd    :                   :         :           :                
+ALUF[30]                     : Y16       : output : 2.5 V             :         : 4         : N              
+SRC2[19]                     : Y17       : output : 2.5 V             :         : 4         : N              
+ALUF[4]                      : Y18       : output : 2.5 V             :         : 4         : N              
+ALUF[0]                      : Y19       : output : 2.5 V             :         : 4         : N              
+ALUF[7]                      : Y20       : output : 2.5 V             :         : 5         : N              
+SRC1[8]                      : Y21       : output : 2.5 V             :         : 5         : N              
+ALUF[9]                      : Y22       : output : 2.5 V             :         : 5         : N              
